@@ -1,5 +1,5 @@
 global.settings_window_mode = 0;
-global.settings_scaling = 0;
+global.settings_antialiasing = 0;
 global.settings_vertical_sync = 0;
 
 global.settings_master_volume = 0;

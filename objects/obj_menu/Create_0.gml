@@ -26,9 +26,9 @@ option[1, 3] = "Back";
 
 // General Menu
 
-option[2, 0] = "Window Mode: ";
-option[2, 1] = "Scaling: ";
-option[2, 2] = "Vertical Sync: ";
+option[2, 0] = ["Window Mode: ", 0, ["Windowed", "Windowed Borderless", "Fullscreen"]];
+option[2, 1] = ["Anti-Aliasing: ", 0, ["Disabled", "2x (if supported)", "4x (if supported)", "8x (if supported)"]];
+option[2, 2] = ["Vertical Sync: ", 0, ["Disabled", "Enabled"]];
 option[2, 3] = "Back";
 
 // Audio Menu
