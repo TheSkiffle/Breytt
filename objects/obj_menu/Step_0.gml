@@ -22,7 +22,7 @@ if (is_array(option[menu_level, pos])) {
 	option[menu_level, pos][1] = op_pos;
 }
 
-// Handle Menu Navigation
+// Handle Accept On Option
 
 if (accept_key) {
 	var _sml = menu_level;
@@ -133,7 +133,7 @@ if (accept_key) {
 	op_length = array_length(option[menu_level]);
 }
 
-// Handle Option Selection
+// Handle Left Right On Option
 
 if (left_key || right_key) {
 	switch (menu_level) {
@@ -190,13 +190,13 @@ if (left_key || right_key) {
 		case 3: // Audio Menu
 			switch (pos) {
 				case 0: // Master Volume
-					[]
+					global.settings_master_volume = option[menu_level, pos][1];
 					break;
 				case 1: // Music Volume
-					[]
+					global.settings_music_volume = option[menu_level, pos][1];
 					break;
 				case 2: // Effects Volume
-					[]
+					global.settings_effects_volume = option[menu_level, pos][1];
 					break;
 			}
 			break;
