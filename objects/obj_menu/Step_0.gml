@@ -70,7 +70,10 @@ if (accept_key) {
 				case 2: // Vertical Sync
 					[]
 					break;
-				case 3: // Back
+				case 3: // Brightness
+					[]
+					break;
+				case 4: // Back
 					menu_level = 1;
 					break;
 			}
@@ -183,6 +186,9 @@ if (left_key || right_key) {
 							display_reset(global.settings_antialiasing, 1);
 							break;
 					}
+					break;
+				case 3: // Brightness
+					global.settings_brightness = option[menu_level, pos][1];
 					break;
 			}
 			break;

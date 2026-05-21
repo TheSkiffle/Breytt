@@ -1,6 +1,7 @@
 global.settings_window_mode = 0;
 global.settings_antialiasing = 0;
 global.settings_vertical_sync = 0;
+global.settings_brightness = 100;
 
 global.settings_master_volume = 100;
 global.settings_music_volume = 100;

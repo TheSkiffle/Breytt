@@ -32,13 +32,14 @@ option[1, 3] = "Back";
 option[2, 0] = ["Window Mode: ", global.settings_window_mode, ["Windowed", "Windowed Borderless", "Fullscreen"]];
 option[2, 1] = ["Anti-Aliasing: ", global.settings_antialiasing, ["Disabled", "2x (if supported)", "4x (if supported)", "8x (if supported)"]];
 option[2, 2] = ["Vertical Sync: ", global.settings_vertical_sync, ["Disabled", "Enabled"]];
-option[2, 3] = "Back";
+option[2, 3] = ["Brightness: ", global.settings_brightness, array_create_ext(201, function(_index) { return string(_index) })];
+option[2, 4] = "Back";
 
 // Audio Menu
 
-option[3, 0] = ["Master Volume: ", global.settings_master_volume, array_create_ext(200, function(_index) { return string(_index) })];
-option[3, 1] = ["Music Volume: ", global.settings_music_volume, array_create_ext(200, function(_index) { return string(_index) })];
-option[3, 2] = ["Effects Volume: ", global.settings_effects_volume, array_create_ext(200, function(_index) { return string(_index) })];
+option[3, 0] = ["Master Volume: ", global.settings_master_volume, array_create_ext(201, function(_index) { return string(_index) })];
+option[3, 1] = ["Music Volume: ", global.settings_music_volume, array_create_ext(201, function(_index) { return string(_index) })];
+option[3, 2] = ["Effects Volume: ", global.settings_effects_volume, array_create_ext(201, function(_index) { return string(_index) })];
 option[3, 3] = "Back";
 
 // Controls
