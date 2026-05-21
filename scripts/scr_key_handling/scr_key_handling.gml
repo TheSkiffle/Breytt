@@ -31,3 +31,17 @@ function key_translate(_key) {
 			return "Key " + string(_key);
 	}
 }
+
+function open_key_select(_label) {
+	var _inst = instance_create_depth(
+		display_get_gui_width() / 2, 
+		display_get_gui_height() / 2, 
+		-9999, 
+		obj_escape_menu_select_key
+	);
+	
+	_inst.key_ref = _label;
+	menu_frozen = true;
+	
+	return _inst;
+}

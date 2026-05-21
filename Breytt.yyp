@@ -46,7 +46,7 @@
     {"id":{"name":"rm_spawn_hall","path":"rooms/rm_spawn_hall/rm_spawn_hall.yy",},},
     {"id":{"name":"rm_spawn","path":"rooms/rm_spawn/rm_spawn.yy",},},
     {"id":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
-    {"id":{"name":"scr_key_translation","path":"scripts/scr_key_translation/scr_key_translation.yy",},},
+    {"id":{"name":"scr_key_handling","path":"scripts/scr_key_handling/scr_key_handling.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"scr_settings","path":"scripts/scr_settings/scr_settings.yy",},},
     {"id":{"name":"scr_transitions","path":"scripts/scr_transitions/scr_transitions.yy",},},
