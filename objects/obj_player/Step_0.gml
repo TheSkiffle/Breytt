@@ -1,9 +1,10 @@
 // Movement Calculation
 
-right_key = keyboard_check(vk_right);
-left_key = keyboard_check(vk_left);
-up_key = keyboard_check(vk_up);
-down_key = keyboard_check(vk_down);
+right_key = keyboard_check(global.settings_move_right);
+left_key = keyboard_check(global.settings_move_left);
+up_key = keyboard_check(global.settings_move_up);
+down_key = keyboard_check(global.settings_move_down);
+sprint_key = keyboard_check(global.settings_sprint);
 
 xunit = right_key - left_key;
 yunit = down_key - up_key;
@@ -17,8 +18,15 @@ magnitude = sqrt(sqr(xunit) + sqr(yunit));
 normalized_xunit = xunit / sqrt((magnitude != 0) ? magnitude : 1);
 normalized_yunit = yunit / sqrt((magnitude != 0) ? magnitude : 1);
 
-xspd = normalized_xunit * move_spd;
-yspd = normalized_yunit * move_spd;
+if (sprint_key) {
+	xspd = normalized_xunit * sprint_spd;
+	yspd = normalized_yunit * sprint_spd;
+	image_speed = sprint_anim_spd;
+} else {
+	xspd = normalized_xunit * move_spd;
+	yspd = normalized_yunit * move_spd;
+	image_speed = anim_spd;
+}
 
 // Collision Resolution
 

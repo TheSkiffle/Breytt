@@ -2,6 +2,11 @@
 xspd = 0;
 yspd = 0;
 move_spd = 2;
+sprint_spd = 3;
+
+anim_spd = 1;
+sprint_anim_spd = 1.5;
+image_speed = anim_spd;
 
 sprite[RIGHT] = spr_player_right;
 sprite[UP] = spr_player_up;

@@ -1,10 +1,16 @@
+// Check If Menu Frozen
+
+if (menu_frozen) {
+	exit;
+}
+
 // Handle Inputs
 
-up_key = keyboard_check_pressed(vk_up);
-down_key = keyboard_check_pressed(vk_down);
-left_key = keyboard_check_pressed(vk_left);
-right_key = keyboard_check_pressed(vk_right);
-accept_key = keyboard_check_pressed(vk_space);
+up_key = keyboard_check_pressed(global.settings_move_up);
+down_key = keyboard_check_pressed(global.settings_move_down);
+left_key = keyboard_check_pressed(global.settings_move_left);
+right_key = keyboard_check_pressed(global.settings_move_right);
+accept_key = keyboard_check_pressed(global.settings_interact);
 
 // Navigate Menu
 
@@ -22,7 +28,7 @@ if (is_array(option[menu_level, pos])) {
 	option[menu_level, pos][1] = op_pos;
 }
 
-// Handle Menu Navigation
+// Handle Accept On Option
 
 if (accept_key) {
 	var _sml = menu_level;
@@ -35,6 +41,7 @@ if (accept_key) {
 					break;
 				case 1: // Settings
 					menu_level = 1;
+					scroll = 0;
 					break;
 				case 2: // Quit Game
 					game_end();
@@ -46,15 +53,19 @@ if (accept_key) {
 			switch (pos) {
 				case 0: // General
 					menu_level = 2;
+					scroll = 0;
 					break;
 				case 1: // Audio
 					menu_level = 3;
+					scroll = 0;
 					break;
 				case 2: // Controls
 					menu_level = 4;
+					scroll = 0;
 					break;
 				case 3: // Back
 					menu_level = 0;
+					scroll = 0;
 					break;
 			}
 			break;
@@ -70,8 +81,12 @@ if (accept_key) {
 				case 2: // Vertical Sync
 					[]
 					break;
-				case 3: // Back
+				case 3: // Brightness
+					[]
+					break;
+				case 4: // Back
 					menu_level = 1;
+					scroll = 0;
 					break;
 			}
 			break;
@@ -89,41 +104,62 @@ if (accept_key) {
 					break;
 				case 3: // Back
 					menu_level = 1;
+					scroll = 0;
 					break;
 			}
 			break;
 		
 		case 4: // Controls Menu
+			var _key_select = noone;
 			switch (pos) {
 				case 0: // Move Up
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Move Up";
+					menu_frozen = true;
 					break;
 				case 1: // Move Down
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Move Down";
+					menu_frozen = true;
 					break;
 				case 2: // Move Left
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Move Left";
+					menu_frozen = true;
 					break;
 				case 3: // Move Right
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Move Right";
+					menu_frozen = true;
 					break;
 				case 4: // Sprint
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Sprint";
+					menu_frozen = true;
 					break;
 				case 5: // Interact
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Interact";
+					menu_frozen = true;
 					break;
 				case 6: // Open Inventory
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Open Inventory";
+					menu_frozen = true;
 					break;
 				case 7: // Open Settings
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Open Settings";
+					menu_frozen = true;
 					break;
 				case 8: // Skip Dialogue
-					[]
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select.key_ref = "Skip Dialogue";
+					menu_frozen = true;
 					break;
 				case 9: // Back
 					menu_level = 1;
+					scroll = 0;
 					break;
 			}
 			break;
@@ -133,7 +169,7 @@ if (accept_key) {
 	op_length = array_length(option[menu_level]);
 }
 
-// Handle Option Selection
+// Handle Left Right On Option
 
 if (left_key || right_key) {
 	switch (menu_level) {
@@ -184,19 +220,22 @@ if (left_key || right_key) {
 							break;
 					}
 					break;
+				case 3: // Brightness
+					global.settings_brightness = option[menu_level, pos][1];
+					break;
 			}
 			break;
 		
 		case 3: // Audio Menu
 			switch (pos) {
 				case 0: // Master Volume
-					[]
+					global.settings_master_volume = option[menu_level, pos][1];
 					break;
 				case 1: // Music Volume
-					[]
+					global.settings_music_volume = option[menu_level, pos][1];
 					break;
 				case 2: // Effects Volume
-					[]
+					global.settings_effects_volume = option[menu_level, pos][1];
 					break;
 			}
 			break;
