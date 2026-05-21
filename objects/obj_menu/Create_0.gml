@@ -14,6 +14,8 @@ scale = 4;
 pos = 0;
 scroll = 0;
 
+menu_frozen = false;
+
 // Starting Menu
 
 option[0, 0] = "Start Game";
