@@ -38,7 +38,7 @@ draw_sprite_ext(sprite_index, image_index, cam_x + gui_width / 2 - width / 2, ca
 if (y + op_border * scale + op_space * (pos + scroll) * scale + string_height(option[0, 0]) * scale > y + height) { scroll-- };
 if (y + op_border * scale + op_space * (pos + scroll) * scale < y) { scroll++ };
 
-gpu_set_scissor(window_get_width() / 2 - width / 2, window_get_height() / 2 - height / 2, width, height);
+gpu_set_scissor(gui_width / 2 - width / 2, gui_height / 2 - height / 2, width, height);
 for (var _i = 0; _i < op_length; _i++) {
 	var _c = c_white;
 	if (pos == _i) { _c = c_yellow };
