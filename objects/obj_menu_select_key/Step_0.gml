@@ -147,6 +147,8 @@ if (keyboard_check_pressed(vk_anykey)) {
 	}
 }
 
+// Ensure Keys Are Clean
+
 if (key_pressed && !keyboard_check_pressed(vk_anykey)) {
 	obj_menu.menu_frozen = false;
 	instance_destroy();
