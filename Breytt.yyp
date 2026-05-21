@@ -11,7 +11,8 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"obj_lab_decor","folderPath":"folders/Objects/obj_lab_decor.yy","name":"obj_lab_decor","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"menus","folderPath":"folders/Objects/menus.yy","name":"menus","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"lab_decor","folderPath":"folders/Objects/lab_decor.yy","name":"lab_decor","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -31,6 +32,7 @@
   "name":"Breytt",
   "resources":[
     {"id":{"name":"obj_bio_storage_large","path":"objects/obj_bio_storage_large/obj_bio_storage_large.yy",},},
+    {"id":{"name":"obj_escape_menu_select_key","path":"objects/obj_escape_menu_select_key/obj_escape_menu_select_key.yy",},},
     {"id":{"name":"obj_escape_menu","path":"objects/obj_escape_menu/obj_escape_menu.yy",},},
     {"id":{"name":"obj_menu_select_key","path":"objects/obj_menu_select_key/obj_menu_select_key.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},

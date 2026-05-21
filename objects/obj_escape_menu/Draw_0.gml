@@ -54,4 +54,4 @@ for (var _i = 0; _i < op_length; _i++) {
 			_c, _c, _c, _c, 1);
 	}
 }
-gpu_set_scissor(0, 0, window_get_width(), window_get_height());
+gpu_set_scissor(0, 0, gui_width, gui_height);

@@ -120,47 +120,47 @@ if (accept_key) {
 			var _key_select = noone;
 			switch (pos) {
 				case 0: // Move Up
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Move Up";
 					menu_frozen = true;
 					break;
 				case 1: // Move Down
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Move Down";
 					menu_frozen = true;
 					break;
 				case 2: // Move Left
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Move Left";
 					menu_frozen = true;
 					break;
 				case 3: // Move Right
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Move Right";
 					menu_frozen = true;
 					break;
 				case 4: // Sprint
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Sprint";
 					menu_frozen = true;
 					break;
 				case 5: // Interact
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Interact";
 					menu_frozen = true;
 					break;
 				case 6: // Open Inventory
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Open Inventory";
 					menu_frozen = true;
 					break;
 				case 7: // Open Settings
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Open Settings";
 					menu_frozen = true;
 					break;
 				case 8: // Skip Dialogue
-					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_menu_select_key);
+					_key_select = instance_create_depth(display_get_gui_width() / 2, display_get_gui_height() / 2, -9999, obj_escape_menu_select_key);
 					_key_select.key_ref = "Skip Dialogue";
 					menu_frozen = true;
 					break;
