@@ -6,8 +6,8 @@
   "name":"obj_table_medv",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_lab_decor",
-    "path":"folders/Objects/obj_lab_decor.yy",
+    "name":"lab_decor",
+    "path":"folders/Objects/lab_decor.yy",
   },
   "parentObjectId":{
     "name":"obj_wall",

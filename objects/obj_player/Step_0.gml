@@ -10,7 +10,7 @@ open_settings_key = keyboard_check_pressed(global.settings_open_settings);
 if (open_settings_key && settings_opened == false && !global.mid_transition) {
 	var cam_x = camera_get_view_x(view_camera[0]);
 	var cam_y = camera_get_view_y(view_camera[0]);
-	instance_create_depth(cam_x + display_get_gui_width() / 2, cam_y + display_get_gui_height() / 2, -9999, obj_escape_menu);
+	instance_create_depth(cam_x + display_get_gui_width() / 2, cam_y + display_get_gui_height() / 2, -9998, obj_escape_menu);
 	global.paused = true;
 	settings_opened = true;
 }

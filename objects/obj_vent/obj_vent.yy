@@ -6,8 +6,8 @@
   "name":"obj_vent",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_lab_decor",
-    "path":"folders/Objects/obj_lab_decor.yy",
+    "name":"lab_decor",
+    "path":"folders/Objects/lab_decor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

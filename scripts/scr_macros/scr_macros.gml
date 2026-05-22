@@ -1,4 +1,46 @@
+// Player Movement
+
 #macro RIGHT 0
 #macro UP 1
 #macro LEFT 2
 #macro DOWN 3
+
+// Menu Options
+
+#macro STARTING_MENU 0
+#macro SETTINGS_MENU 1
+#macro GENERAL_MENU 2
+#macro AUDIO_MENU 3
+#macro CONTROLS_MENU 4
+
+#macro START_RESUME 0
+#macro START_START_GAME 0
+#macro START_SETTINGS 1
+#macro START_QUIT_GAME 2
+
+#macro SET_GENERAL 0
+#macro SET_AUDIO 1
+#macro SET_CONTROLS 2
+#macro SET_BACK 3
+
+#macro GEN_WINDOW_MODE 0
+#macro GEN_ANTIALIASING 1
+#macro GEN_VSYNC 2
+#macro GEN_BRIGHTNESS 3
+#macro GEN_BACK 4
+
+#macro AUD_MASTER_VOL 0
+#macro AUD_MUSIC_VOL 1
+#macro AUD_EFFECTS_VOL 2
+#macro AUD_BACK 3
+
+#macro CON_MOVE_UP 0
+#macro CON_MOVE_DOWN 1
+#macro CON_MOVE_LEFT 2
+#macro CON_MOVE_RIGHT 3
+#macro CON_SPRINT 4
+#macro CON_INTERACT 5
+#macro CON_OPEN_INVENTORY 6
+#macro CON_OPEN_SETTINGS 7
+#macro CON_SKIP_DIALOGUE 8
+#macro CON_BACK 9
