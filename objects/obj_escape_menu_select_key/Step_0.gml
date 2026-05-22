@@ -5,7 +5,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 		key_already_used = true;
 	} else {
 		key_pressed = true;
-		apply_escape_key_binding(keyboard_key, key_ref);
+		apply_key_binding(keyboard_key, key_ref, obj_escape_menu);
 	}
 }
 

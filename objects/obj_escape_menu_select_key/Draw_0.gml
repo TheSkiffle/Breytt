@@ -2,11 +2,11 @@
 
 draw_set_alpha(0.5);
 draw_set_colour(c_black);
-var cam_x = camera_get_view_x(view_camera[0]);
-var cam_y = camera_get_view_y(view_camera[0]);
-var gui_width = display_get_gui_width();
-var gui_height = display_get_gui_height();
-draw_rectangle(cam_x, cam_y, cam_x + gui_width, cam_y + gui_height, false);
+var _cam_x = camera_get_view_x(view_camera[0]);
+var _cam_y = camera_get_view_y(view_camera[0]);
+var _gui_width = display_get_gui_width();
+var _gui_height = display_get_gui_height();
+draw_rectangle(_cam_x, _cam_y, _cam_x + _gui_width, _cam_y + _gui_height, false);
 draw_set_alpha(1);
 
 // Draw Menu
@@ -20,15 +20,15 @@ if (key_already_used) {
 }
 draw_sprite_ext(
 	sprite_index, image_index, 
-	cam_x + gui_width / 2 - width / 2, 
-	cam_y + gui_height / 2 - height / 2, 
+	_cam_x + _gui_width / 2 - width / 2, 
+	_cam_y + _gui_height / 2 - height / 2, 
 	width/sprite_width, height/sprite_height, 0, c_white, 1
 );
 
 // Draw Text
 
-var _xpos = cam_x + gui_width / 2 + op_border * scale - width / 2;
-var _ypos = cam_y + gui_height / 2 + op_border * scale - height / 2;
+var _xpos = _cam_x + _gui_width / 2 + op_border * scale - width / 2;
+var _ypos = _cam_y + _gui_height / 2 + op_border * scale - height / 2;
 var _c = c_white;
 draw_text_transformed_colour(
 	_xpos, _ypos, 

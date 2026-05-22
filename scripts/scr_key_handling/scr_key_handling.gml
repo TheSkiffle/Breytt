@@ -67,7 +67,7 @@ function is_key_used(_key, _exclude_control) {
 	return false;
 }
 
-function apply_escape_key_binding(_key, _control) {
+function apply_key_binding(_key, _control, _menu_obj) {
 	variable_global_set(global.control_to_setting[_control], _key);
-	obj_escape_menu.option[CONTROLS_MENU, _control][2] = [key_translate(_key)];
+	 _menu_obj.option[CONTROLS_MENU, _control][2] = [key_translate(_key)];
 }
