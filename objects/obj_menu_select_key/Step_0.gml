@@ -1,6 +1,6 @@
 if (keyboard_check_pressed(vk_anykey)) {
 	switch (key_ref) {
-		case "Move Up":
+		case CON_MOVE_UP:
 			if ((keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
 				(keyboard_key == global.settings_move_right) ||
@@ -16,7 +16,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_move_up = keyboard_key;
 			obj_menu.option[4, 0][2] = [key_translate(global.settings_move_up)];
 			break;
-		case "Move Down":
+		case CON_MOVE_DOWN:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_left) ||
 				(keyboard_key == global.settings_move_right) ||
@@ -32,7 +32,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_move_down = keyboard_key;
 			obj_menu.option[4, 1][2] = [key_translate(global.settings_move_down)];
 			break;
-		case "Move Left":
+		case CON_MOVE_LEFT:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_right) ||
@@ -48,7 +48,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_move_left = keyboard_key;
 			obj_menu.option[4, 2][2] = [key_translate(global.settings_move_left)];
 			break;
-		case "Move Right":
+		case CON_MOVE_RIGHT:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
@@ -64,7 +64,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_move_right = keyboard_key;
 			obj_menu.option[4, 3][2] = [key_translate(global.settings_move_right)];
 			break;
-		case "Sprint":
+		case CON_SPRINT:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
@@ -80,7 +80,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_sprint = keyboard_key;
 			obj_menu.option[4, 4][2] = [key_translate(global.settings_sprint)];
 			break;
-		case "Interact":
+		case CON_INTERACT:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
@@ -96,7 +96,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_interact = keyboard_key;
 			obj_menu.option[4, 5][2] = [key_translate(global.settings_interact)];
 			break;
-		case "Open Inventory":
+		case CON_OPEN_INVENTORY:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
@@ -112,7 +112,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_open_inventory = keyboard_key;
 			obj_menu.option[4, 6][2] = [key_translate(global.settings_open_inventory)];
 			break;
-		case "Open Settings":
+		case CON_OPEN_SETTINGS:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||
@@ -128,7 +128,7 @@ if (keyboard_check_pressed(vk_anykey)) {
 			global.settings_open_settings = keyboard_key;
 			obj_menu.option[4, 7][2] = [key_translate(global.settings_open_settings)];
 			break;
-		case "Skip Dialogue":
+		case CON_SKIP_DIALOGUE:
 			if ((keyboard_key == global.settings_move_up) ||
 				(keyboard_key == global.settings_move_down) ||
 				(keyboard_key == global.settings_move_left) ||

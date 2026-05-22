@@ -42,12 +42,12 @@ function key_translate(_key) {
 	}
 }
 
-function open_escape_key_select(_label) {
+function open_key_select(_label, _menu_obj) {
 	var _inst = instance_create_depth(
 		display_get_gui_width() / 2, 
 		display_get_gui_height() / 2, 
 		-9999, 
-		obj_escape_menu_select_key
+		_menu_obj
 	);
 	
 	_inst.key_ref = _label;
