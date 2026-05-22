@@ -18,17 +18,27 @@ draw_set_halign(fa_left);
 if (key_already_used) {
 	height = 170;
 }
-draw_sprite_ext(sprite_index, image_index, cam_x + gui_width / 2 - width / 2, cam_y + gui_height / 2 - height / 2, width/sprite_width, height/sprite_height, 0, c_white, 1);
+draw_sprite_ext(
+	sprite_index, image_index, 
+	cam_x + gui_width / 2 - width / 2, 
+	cam_y + gui_height / 2 - height / 2, 
+	width/sprite_width, height/sprite_height, 0, c_white, 1
+);
 
 // Draw Text
 
-draw_text_transformed_colour(cam_x + gui_width / 2 + op_border * scale - width / 2, cam_y + gui_height / 2 + op_border * scale - height / 2, 
+var _xpos = cam_x + gui_width / 2 + op_border * scale - width / 2;
+var _ypos = cam_y + gui_height / 2 + op_border * scale - height / 2;
+var _c = c_white;
+draw_text_transformed_colour(
+	_xpos, _ypos, 
 	"Press Any Key!", 
 	scale, scale, 0,
-	c_white, c_white, c_white, c_white, 1);
+	_c, _c, _c, _c, 1);
 if (key_already_used) {
-	draw_text_transformed_colour(cam_x + gui_width / 2 + op_border * scale - width / 2, cam_y + gui_height / 2 + op_border * scale - height / 2 + op_space * scale, 
+	draw_text_transformed_colour(
+		_xpos, _ypos + op_space * scale, 
 		"Key In Use", 
 		scale, scale, 0,
-		c_white, c_white, c_white, c_white, 1);
+		_c, _c, _c, _c, 1);
 }

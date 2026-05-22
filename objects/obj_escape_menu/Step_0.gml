@@ -101,7 +101,7 @@ if (accept_key) {
 			if (pos == CON_BACK) {
 				menu_level = 1;
 				scroll = 0;
-			} else { open_key_select(pos); }
+			} else { open_escape_key_select(pos); }
 			break;
 	}
 	

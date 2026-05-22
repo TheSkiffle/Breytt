@@ -1,3 +1,13 @@
+global.control_to_setting[CON_MOVE_UP] = "settings_move_up";
+global.control_to_setting[CON_MOVE_DOWN] = "settings_move_down";
+global.control_to_setting[CON_MOVE_LEFT] = "settings_move_left";
+global.control_to_setting[CON_MOVE_RIGHT] = "settings_move_right";
+global.control_to_setting[CON_SPRINT] = "settings_sprint";
+global.control_to_setting[CON_INTERACT] = "settings_interact";
+global.control_to_setting[CON_OPEN_INVENTORY] = "settings_open_inventory";
+global.control_to_setting[CON_OPEN_SETTINGS] = "settings_open_settings";
+global.control_to_setting[CON_SKIP_DIALOGUE] = "settings_SKIP_DIALOGUE";
+
 function key_translate(_key) {
 	switch (_key) {
 		case vk_up: return "Up Arrow";
@@ -32,7 +42,7 @@ function key_translate(_key) {
 	}
 }
 
-function open_key_select(_label) {
+function open_escape_key_select(_label) {
 	var _inst = instance_create_depth(
 		display_get_gui_width() / 2, 
 		display_get_gui_height() / 2, 
@@ -44,4 +54,20 @@ function open_key_select(_label) {
 	menu_frozen = true;
 	
 	return _inst;
+}
+
+function is_key_used(_key, _exclude_control) {
+	for (var _i = 0; _i < array_length(global.control_to_setting); _i++) {
+		var _control = variable_global_get(global.control_to_setting[_i]);
+		
+		if (_control == variable_global_get(global.control_to_setting[_exclude_control])) continue;
+		
+		if (_key == _control) { return true; }
+	}
+	return false;
+}
+
+function apply_escape_key_binding(_key, _control) {
+	variable_global_set(global.control_to_setting[_control], _key);
+	obj_escape_menu.option[CONTROLS_MENU, _control][2] = [key_translate(_key)];
 }
